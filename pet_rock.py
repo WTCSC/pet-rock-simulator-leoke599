@@ -1,11 +1,19 @@
 # Simple pet rock simulator
 name = input("What is your pet rock's name? ")
+
+# Initial stats
 happiness = 5
 hunger = 5
 age = 0
+
+# Game loop
 while True:
+
+    # Display current stats
     print(f"\n{name}'s current happiness: {happiness}, hunger: {hunger}, age: {age}")
     command = input(f"What do you want {name} to do? (type 'exit' to quit) \n Play \n Feed \n Sleep \n") 
+
+    # Handle commands
     if command.lower() == 'exit':
         print("Thanks for playing!")
         break
@@ -60,5 +68,6 @@ while True:
             print(f"You prayed for {name}. It became a God! It consumes the entire world for food.")
             break
 
+    # Else for unknown commands
     else:
         print(f"{name} is still with you. Please select an action.")
